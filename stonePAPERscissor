@@ -1,0 +1,26 @@
+g=["s","p","sc"]
+c="Y"
+user=computer=0
+print("sc:scissor")
+print("p:paper")
+print("s:stone")
+import random
+while( c!="n" and c!="N"):
+       ch=input("enter your choice:s/p/sc:-")
+       com=random.choice(g)
+       print("computer choose:-" , com)
+       if ch==com:
+           print("MATCH TIE")
+       elif ch=="sc" and com=="p"  or  ch=="p" and com=="s"  or ch=="s" and com=="sc":
+           print("YOU WON")
+           user+=1
+       else:
+           print("sorry,you lose")
+           computer+=1
+       c=input("Do you want to continue:y/n:--")
+print("YOUR OVERALL SCORE :",user)
+print("COMPUTER OVERALL SCORE :",computer)
+if user>computer:
+    print("YOU ARE THE WINNER")
+else:
+     print("you lost the game")
